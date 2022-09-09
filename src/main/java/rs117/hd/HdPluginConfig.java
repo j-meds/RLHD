@@ -458,7 +458,7 @@ public interface HdPluginConfig extends Config
 	)
 	default TextureResolution textureResolution()
 	{
-		return TextureResolution.RES_256;
+		return TextureResolution.RES_1024;
 	}
 
 	@ConfigItem(

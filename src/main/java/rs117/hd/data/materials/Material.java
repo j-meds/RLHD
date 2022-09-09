@@ -290,6 +290,28 @@ public enum Material
 	BARK,
 	WOOD_GRAIN,
 
+	STONE_FLOOR_D,
+	STONE_FLOOR_N,
+	STONE_FLOOR(p -> p
+			.setTextureScale(1.2f, 1.2f)
+			.setSpecular(1.1f, 360)
+			.setNormalMap(STONE_FLOOR_N)
+			.setDisplacementMap(STONE_FLOOR_D)),
+
+	STYLIZED_STONE_FLOOR_D,
+	STYLIZED_STONE_FLOOR_N,
+	STYLIZED_STONE_FLOOR(p -> p
+			.setTextureScale(1.4f, 1.4f)
+			.setSpecular(1.1f, 200)
+			.setNormalMap(STYLIZED_STONE_FLOOR_N)
+			.setDisplacementMap(STYLIZED_STONE_FLOOR_D)),
+
+	ROCKS_HEXAGONS_D,
+	ROCKS_HEXAGONS_N,
+	ROCKS_HEXAGONS(p -> p
+			.setNormalMap(ROCKS_HEXAGONS_N)
+			.setDisplacementMap(ROCKS_HEXAGONS_D)),
+
 	HD_INFERNAL_CAPE(p -> p
 		.replaceIf(INFERNAL_CAPE, HdPluginConfig::hdInfernalTexture)
 		.setEmissiveStrength(1)
